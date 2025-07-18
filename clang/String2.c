@@ -1,5 +1,5 @@
 #include<stdio.h>
-int i,j;
+int i,j,k;
 void getArray(int a[2][2]){
 	for(i=0;i<2;i++){
 		for(j=0;j<2;j++){
@@ -23,12 +23,24 @@ void add(int a[2][2],int b[2][2],int c[2][2]){
 		}
 	}
 }
+void multiply(int a[2][2], int b[2][2], int d[2][2]){
+	for(i=0;i<2;i++){
+		for(j=0;j<2;j++){
+			d[i][j] = 0;
+			for(k=0; k<2; k++){
+				d[i][j] += a[i][k] * b[k][j];
+			}
+		}
+	}
+}
 main(){
-	int a[2][2],b[2][2],c[2][2];
+	int a[2][2],b[2][2],c[2][2],d[2][2];
 	getArray(a);
 	getArray(b);
 	showArray(a);
 	showArray(b);
 	add(a,b,c);
 	showArray(c);
+	multiply(a, b, d);
+	showArray(d);
 }
