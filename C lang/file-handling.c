@@ -3,7 +3,7 @@ main(){
 	char data[100];
 	FILE *fp;
 	fp=fopen("hello.txt","w");
-	fprintf(fp,"hello tops");
+	fprintf(fp,"hello OM");
 	
 	fclose(fp);
 	
