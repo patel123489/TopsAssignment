@@ -12,6 +12,7 @@ main() {
     printf("3\tPasta\t\tRs. 140\n");
     printf("4\tSandwich\tRs. 120\n");
     printf("5\tCoffee\t\tRs. 100\n");
+    printf("6\tIce Cream\tRs.80\n");
 
     do {
         // Taking user choice
@@ -39,6 +40,8 @@ main() {
             case 5:
                 total += 100 * quantity;
                 break;
+            case 6:
+            	total += 80 *  quantity;
             default:
                 printf("Invalid choice! Please enter a valid code.\n");
         }
