@@ -6,8 +6,8 @@ main(){
 	fp=fopen("student.csv","w");
 	for(i=1;i<=3;i++){
 		printf("\n Enter enroll name and email");
-		scanf("%d,%s,%s",&enroll,name,email);
-		fprintf(fp,"%d",enroll,name,email);
+		scanf("%d %s %s",&enroll,name,email);
+		fprintf(fp,"%d,%s,%s \n",enroll,name,email);
 	}
 	fclose(fp);
 	
