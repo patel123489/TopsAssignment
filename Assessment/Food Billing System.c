@@ -8,11 +8,13 @@ main() {
     printf("======== MENU ========\n");
     printf("Code\tItem\t\tPrice\n");
     printf("1\tPizza\t\tRs. 180\n");
-    printf("2\tBurger\t\tRs. 150\n");
-    printf("3\tPasta\t\tRs. 140\n");
-    printf("4\tSandwich\tRs. 120\n");
-    printf("5\tCoffee\t\tRs. 100\n");
-    printf("6\tIce Cream\tRs.80\n");
+    printf("2\tVada Pav\tRs. 170\n");
+    printf("3\tVeg Noodles\tRs. 160\n");
+    printf("4\tBurger\t\tRs. 150\n");
+    printf("5\tPasta\t\tRs. 140\n");
+    printf("6\tSandwich\tRs. 120\n");
+    printf("7\tCoffee\t\tRs. 100\n");
+    printf("8\tIce Cream\tRs.80\n");
 
     do {
         // Taking user choice
@@ -29,18 +31,24 @@ main() {
                 total += 180 * quantity;
                 break;
             case 2:
-                total += 150 * quantity;
+                total += 170 * quantity;
                 break;
             case 3:
-                total += 140 * quantity;
+                total += 160 * quantity;
                 break;
             case 4:
-                total += 120 * quantity;
+                total += 150 * quantity;
                 break;
             case 5:
-                total += 100 * quantity;
+                total += 140 * quantity;
                 break;
             case 6:
+                total += 120 * quantity;
+                break;
+            case 7:
+                total += 100 * quantity;
+                break;
+            case 8:
             	total += 80 *  quantity;
             default:
                 printf("Invalid choice! Please enter a valid code.\n");
