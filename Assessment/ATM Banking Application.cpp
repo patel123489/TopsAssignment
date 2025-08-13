@@ -15,9 +15,9 @@ public:
     }
     void displayDetails() const {
         cout << "\n----- Account Details -----";
-        cout << "\nAccount Holder: " << accountHolder;
-        cout << "\nAccount Number: " << accountNumber;
-        cout << "\nBalance: ?" << balance << endl;
+        cout << "\nAccount Holder:" << accountHolder;
+        cout << "\nAccount Number:" << accountNumber;
+        cout << "\nBalance:" << balance << endl;
     }
     void deposit(double amount) {
         if (amount > 0) {
