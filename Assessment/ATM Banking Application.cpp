@@ -36,9 +36,9 @@ public:
         }
     }
     void checkBalance() const {
-    	cout<<"*";
+    	cout<<"********************";
         cout<< "\n Current Balance:" << balance << endl;
-        cout<<"*";
+        cout<<"********************";
     }
 };
 // Main class for ATM
