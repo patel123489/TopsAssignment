@@ -6,7 +6,6 @@ private:
     string accountHolder;
     int accountNumber;
     double balance;
-
 public:
     BankAccount(string name, int accNum, double initialBalance) {
         accountHolder = name;
@@ -73,7 +72,6 @@ main() {
     do {
         ATM::showMenu(); 
         cin >> choice;
-
         switch (choice) {
             case 1:
                 account.displayDetails();
