@@ -1,23 +1,30 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 class BankAccount {
 private:
     string accountHolder;
     int accountNumber;
+    string branchName;   // Added branch name
     double balance;
+
 public:
-    BankAccount(string name, int accNum, double initialBalance) {
+    BankAccount(string name, int accNum, string branch, double initialBalance) {
         accountHolder = name;
         accountNumber = accNum;
+        branchName = branch;
         balance = initialBalance;
     }
+
     void displayDetails() const {
         cout << "\n----- Account Details -----";
-        cout << "\nAccount Holder:" << accountHolder;
-        cout << "\nAccount Number:" << accountNumber;
-        cout << "\nBalance:" << balance << endl;
+        cout << "\nAccount Holder: " << accountHolder;
+        cout << "\nAccount Number: " << accountNumber;
+        cout << "\nBranch Name: " << branchName;
+        cout << "\nBalance: " << balance << endl;
     }
+
     void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -26,6 +33,7 @@ public:
             cout << "Invalid deposit amount!\n";
         }
     }
+
     void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
@@ -34,12 +42,14 @@ public:
             cout << "Invalid or Insufficient balance!\n";
         }
     }
+
     void checkBalance() const {
-    	cout<<"********************";
-        cout<< "\n Current Balance:" << balance << endl;
-        cout<<"********************";
+        cout << "********************";
+        cout << "\nCurrent Balance: ?" << balance << endl;
+        cout << "********************";
     }
 };
+
 // Main class for ATM
 class ATM {
 public:
@@ -53,20 +63,23 @@ public:
         cout << "\nEnter your choice: ";
     }
 };
-main() {
-    string name;
+
+int main() {
+    string name, branch;
     int accNum;
     double initialBalance;
 
     cout << "Enter Account Holder Name: ";
-    getline(cin, name);
+    cin>>name;
     cout << "Enter Account Number: ";
     cin >> accNum;
-    cout << "Enter Initial Balance:";
+    cout << "Enter Branch Name: ";
+    cin>>branch;
+    cout << "Enter Initial Balance: ";
     cin >> initialBalance;
 
     // Creating BankAccount object using constructor
-    BankAccount account(name, accNum, initialBalance);
+    BankAccount account(name, accNum, branch, initialBalance);
     
     int choice;
     do {
